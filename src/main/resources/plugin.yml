@@ -1,6 +1,6 @@
 name: resetOnDeath
 version: '1.0'
 main: fr.thomasprovost.resetOnDeath.Main
-api-version: '1.18'
 authors: [ thomas-provost ]
+load: STARTUP
 website: https://github.com/thomas-provost/resetOnDeath
