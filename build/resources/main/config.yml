@@ -1,0 +1,36 @@
+#
+# Welcome to the plugin's configuration file!
+# This file is used to configure the plugin to your liking.
+#
+# Author: thomas-provost
+# Source code: https://github.com/thomas-provost/resetOnDeath
+#
+OVERWORLD:
+  NAME: "world"
+  RESET-ON-DEATH: true
+NETHER:
+  NAME: "world_nether"
+  RESET-ON-DEATH: true
+END:
+  NAME: "world_the_end"
+  RESET-ON-DEATH: true
+TEMPORARY-WORLD:
+  NAME: "temporary_world"
+
+RESET-DELAY: 10 # In seconds
+DIFFICULTY: 3 # 0: Peaceful, 1: Easy, 2: Normal, 3: Hard
+
+CHECK-UPDATE: true
+DEATH-SOUND: "ENTITY_LIGHTNING_BOLT_THUNDER"
+TELEPORT-SOUND: "ENTITY_ENDERMAN_TELEPORT"
+
+MESSAGES:
+  PREFIX: "&cDaemon &f» &r"
+  KICK-REASON: "&cYou died and temporary world isn't disponible."
+  DEATH-ANNOUNCE: "&c&lOH NO ! &e%player_name% &fis &cdead &f!"
+  DEATH-TITLE:
+    TITLE: "§cYou died!"
+    SUBTITLE: "&fThe world will be &creset&f in &e%time% seconds&f."
+  WORLD-RESET: "&fThe world will be &creset&f in &e%time% seconds&f."
+  RESET-TERMINATED: "&fThe world has been &creset&f. Have fun !"
+  TELEPORT-BACK: "&fYou have been teleported back to the overworld."

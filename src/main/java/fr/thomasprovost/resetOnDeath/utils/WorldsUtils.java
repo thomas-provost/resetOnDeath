@@ -3,10 +3,13 @@ package fr.thomasprovost.resetOnDeath.utils;
 import fr.thomasprovost.resetOnDeath.Main;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.Difficulty;
 import org.bukkit.World;
 import org.bukkit.WorldCreator;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 import java.io.File;
 import java.io.IOException;
@@ -61,7 +64,9 @@ public class WorldsUtils {
                     .environment(World.Environment.NORMAL);
 
             World temp = Bukkit.createWorld(creator);
-        }+
+            temp.setPVP(false);
+            temp.setDifficulty(Difficulty.PEACEFUL);
+        }
     }
 
     public static void createWorlds() {

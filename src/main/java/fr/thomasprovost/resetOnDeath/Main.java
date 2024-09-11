@@ -1,8 +1,11 @@
 package fr.thomasprovost.resetOnDeath;
 
+import fr.thomasprovost.resetOnDeath.game.GameTask;
 import fr.thomasprovost.resetOnDeath.managers.ListenersManager;
 import fr.thomasprovost.resetOnDeath.utils.WorldsUtils;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import static fr.thomasprovost.resetOnDeath.utils.WorldsUtils.createTemporaryWorld;
 
 public final class Main extends JavaPlugin {
 
@@ -13,6 +16,7 @@ public final class Main extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
         WorldsUtils.createWorlds();
+        createTemporaryWorld();
 
         ListenersManager listenersManager = new ListenersManager();
         listenersManager.initListeners();
@@ -28,6 +32,9 @@ public final class Main extends JavaPlugin {
         getLogger().info("*");
         getLogger().info("* ResetOnDeath plugin started successfully !");
         getLogger().info("*");
+
+        GameTask gameTask = new GameTask();
+        gameTask.run();
     }
 
     public static Main getInstance() {
